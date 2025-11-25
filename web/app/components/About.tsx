@@ -30,14 +30,14 @@ export default function AboutPage() {
 
           <div>
             <h2 className="text-2xl font-bold">SmallBee Trophie Lampung</h2>
-            <p className="text-gray-600 mt-1">Toko sembako kami menyediakan kebutuhan pokok harian dengan harga terjangkau dan kualitas terjamin. Kami melayani pelanggan dengan cepat, ramah, dan selalu menjaga ketersediaan barang.</p>
+            <p className="text-gray-600 mt-1">SmallBee Trophie Lampung menyediakan piala dan plakat berkualitas dengan desain modern dan finishing premium. Harga terjangkau, layanan cepat, dan bisa custom sesuai kebutuhan acara Anda.</p>
           </div>
 
           <div>
             <h3 className="text-xl font-bold mb-2">Visi</h3>
             <div className="bg-[#d2f7ff] rounded-xl shadow-md p-5">
               <p className="text-gray-700 leading-relaxed">
-                Menjadi toko sembako terpercaya yang memberikan kemudahan dan kenyamanan bagi masyarakat dalam memenuhi kebutuhan sehari-hari.
+                Menjadi penyedia piala dan plakat terpercaya di Lampung dengan kualitas terbaik, desain inovatif, dan pelayanan unggul.
               </p>
             </div>
           </div>
@@ -45,7 +45,8 @@ export default function AboutPage() {
           <div>
             <h3 className="text-xl font-bold mb-2">Misi</h3>
             <div className="bg-[#d2f7ff] rounded-xl shadow-md p-5 space-y-3">
-              <p>Menyediakan produk berkualitas, menjaga harga tetap bersahabat, serta memberikan pelayanan yang baik dan responsif kepada setiap pelanggan.</p>
+              <p>Menghadirkan produk penghargaan yang rapi, elegan, dan dapat disesuaikan sesuai kebutuhan pelanggan.</p>
+              <p>Memberikan pelayanan cepat, ramah, serta menjaga kualitas dan ketepatan waktu dalam setiap proses pengerjaan.</p>
             </div>
           </div>
 

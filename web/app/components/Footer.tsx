@@ -20,7 +20,7 @@ backgroundPosition: "center",
     <div className="flex flex-col justify-start">
       <div className="flex items-center gap-0 -mt-4">
         <img
-          src="/images/WARUNG.png"
+          src="/images/SmallBee.png"
           alt="Warung Logo"
           className="w-35 h-35 object-contain"
         />

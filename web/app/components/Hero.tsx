@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = ["/images/17.png", "/images/18.png"];
+const images = ["/images/HeroUtama.png", "/images/HeroKedua.png"];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -20,7 +20,6 @@ export default function Hero() {
       id="beranda"
       className="relative w-full h-screen overflow-hidden"
     >
-
       {/* Background Slider */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -42,26 +41,39 @@ export default function Hero() {
             />
 
             {/* Gradient overlay lebih soft & clean */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40" />
           </motion.div>
         </AnimatePresence>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-end items-center pb-12 text-white">
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center text-white px-6">
+        
+        {/* Title */}
+        <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
+          SmallBee Trophy Lampung
+        </h1>
 
-        {/* Indicator */}
-        <div className="flex gap-2">
-          {images.map((_, index) => (
-            <span
-              key={index}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                current === index ? "bg-white" : "bg-white/40"
-              }`}
-            />
-          ))}
-        </div>
-      </div>
+
+
+  {/* Subtitle */}
+  <p className="mt-3 text-sm 2x1:text-base max-w-2x1 text-center text-white/90 drop-shadow-md">
+    Penyedia beragam trophy, plakat, dan merchandise custom berkualitas untuk berbagai kebutuhan acara dan penghargaan.
+  </p>
+
+  {/* Indicator */}
+  <div className="absolute bottom-10 flex gap-2">
+    {images.map((_, index) => (
+      <span
+        key={index}
+        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+          current === index ? "bg-white" : "bg-white/40"
+        }`}
+      />
+    ))}
+  </div>
+</div>
+
     </section>
   );
 }
