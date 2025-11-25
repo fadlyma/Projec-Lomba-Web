@@ -11,12 +11,12 @@ export default function CeritaPage() {
       className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden pb-24"
     >
       {/* Background gradasi */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#ffffff] to-[#e9e7c7]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#ffffff] to-[#bde0f8]"></div>
 
       {/* Tekstur garis */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-3">
         <Image
-          src="/images/tekturgaris.svg"
+          src="/images/peta.svg"
           alt="Tekstur garis"
           fill
           className="object-cover"
@@ -69,8 +69,9 @@ export default function CeritaPage() {
 
         {/* GAMBAR */}
         <div className="w-full md:w-1/2 flex justify-center relative">
+        
           <Image
-            src="/images/31.png"
+            src="/images/34.png"
             alt="Traveler"
             width={520}   // 🔥 Diperkecil agar lebih clean
             height={520}
@@ -79,20 +80,30 @@ export default function CeritaPage() {
         </div>
       </div>
 
-      {/* MAPS */}
-      <div className="relative z-10 w-full flex justify-center mt-14 px-6 md:px-20">
-        <div className="w-full max-w-4xl h-[300px] md:h-[420px] rounded-xl overflow-hidden shadow-lg border border-gray-300">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!4v1732168448292!6m8!1m7!1sn_qv-ZH6WGV3pdaPVCtQyg!2m2!1d-5.387658084242111!2d105.2587204316309!3f274.87!4f-3.68!5f0.7820865974627469"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
+     {/* MAPS */}
+<div className="relative z-10 w-full flex flex-col items-center mt-14 px-6 md:px-20">
+
+  {/* TITLE */}
+  <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-6">
+    Alamat
+  </h2>
+
+  {/* MAPS CONTAINER */}
+  <div className="w-full max-w-4xl h-[300px] md:h-[420px] rounded-xl overflow-hidden shadow-lg border border-gray-300">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.5980876523966!2d105.25872!3d-5.387658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40db9d86d86f0b%3A0xbab8afcdb7a3a!2sLokasi%20Anda!5e0!3m2!1sid!2sid!4v1732171200000!5m2!1sid!2sid"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+
+</div>
+
     </section>
   );
 }

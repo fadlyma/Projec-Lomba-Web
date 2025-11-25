@@ -29,27 +29,39 @@ backgroundPosition: "center",
 
     {/* Quick Links */}
     <div>
-      <h3 className="font-semibold mb-4 text-white">Quick Links</h3>
-      <ul className="space-y-2 text-slate-300 text-sm">
-        <li>
-          <a href="#" className="hover:text-white">
-            About Warung
-          </a>
-        </li>
-      </ul>
-    </div>
+  <h3 className="font-semibold mb-4 text-white">Quick Links</h3>
+  <ul className="space-y-2 text-slate-300 text-sm">
+    <li>
+      <a href="#" className="hover:text-white">
+        About SmallBee
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-white">
+        Location
+      </a>
+    </li>
+  </ul>
+</div>
+
 
     {/* Top Destination */}
     <div>
-      <h3 className="font-semibold mb-4 text-white">Top Destination</h3>
-      <ul className="space-y-2 text-slate-300 text-sm">
-        <li>
-          <a href="#" className="hover:text-white">
-            Rio The Beach
-          </a>
-        </li>
-      </ul>
-    </div>
+  <h3 className="font-semibold mb-4 text-white">Produc</h3>
+  <ul className="space-y-2 text-slate-300 text-sm">
+    <li>
+      <a href="#tentang" className="hover:text-white">
+        Trophie
+      </a>
+    </li>
+    <li>
+      <a href="#" className="hover:text-white">
+        Medal
+      </a>
+    </li>
+  </ul>
+</div>
+
 
     {/* Contact Info */}
     <div>
@@ -72,7 +84,7 @@ backgroundPosition: "center",
 
   {/* Copyright */}
   <div className="relative z-10 border-t border-slate-800 mt-10 pt-4 text-center text-slate-400 text-sm">
-    &copy; {new Date().getFullYear()} Warung Mbak Hesti
+    &copy; {new Date().getFullYear()} SamllBee Trophie Lampung
   </div>
 </footer>
 );

@@ -26,16 +26,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#eadbc8]/80 backdrop-blur-md shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-16 h-20">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/80 shadow-sm">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-14 h-20">
 
-        {/* LOGO (TIDAK DIUBAH UKURAN) */}
-        <div className="cursor-pointer">
+        {/* LOGO */}
+        <div className="cursor-pointer select-none">
           <Image
             src="/images/WARUNG.PNG"
             alt="Logo Warung"
-            width={120}
-            height={120}
+            width={110}
+            height={110}
+            priority
             className="object-contain"
           />
         </div>
@@ -46,11 +47,12 @@ export default function Navbar() {
             <button
               key={item.label}
               onClick={() => handleScroll(item.label, item.id)}
-              className={`text-[15px] tracking-wide transition-all duration-200 ${
-                active === item.label
-                  ? "font-semibold text-black"
-                  : "font-normal text-[#444] hover:text-black"
-              }`}
+              className={`text-[15px] transition-all duration-300 tracking-wide
+                ${
+                  active === item.label
+                    ? "text-black font-semibold"
+                    : "text-gray-600 hover:text-black"
+                }`}
             >
               {item.label}
             </button>
@@ -58,29 +60,37 @@ export default function Navbar() {
         </div>
 
         {/* MOBILE TOGGLE BUTTON */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button
+          className="md:hidden transition-all duration-200 active:scale-90"
+          onClick={() => setOpen(!open)}
+        >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* MOBILE MENU */}
-      {open && (
-        <div className="md:hidden bg-white/95 shadow-md backdrop-blur-md px-6 py-4 space-y-4">
+      <div
+        className={`md:hidden bg-white/95 backdrop-blur-md shadow-md overflow-hidden transition-all duration-300 ${
+          open ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-4 space-y-3">
           {navItems.map((item) => (
             <button
               key={item.label}
               onClick={() => handleScroll(item.label, item.id)}
-              className={`block w-full text-left py-2 text-[15px] tracking-wide transition-all duration-200 ${
-                active === item.label
-                  ? "font-semibold text-black"
-                  : "font-medium text-[#444] hover:text-black"
-              }`}
+              className={`block w-full text-left py-2 text-[15px] transition-all duration-300
+                ${
+                  active === item.label
+                    ? "font-semibold text-black"
+                    : "font-medium text-gray-600 hover:text-black"
+                }`}
             >
               {item.label}
             </button>
           ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
